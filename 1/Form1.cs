@@ -35,20 +35,20 @@ namespace _1
         //Кнопка "Очистить"
         private void очиститьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
+            n.Clear();
+            values.Clear();
+            rezult.Clear();
         }
         //Кнопка "Рассчитать"
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox2.Clear();
-            textBox3.Clear();
+            values.Clear();
+            rezult.Clear();
             //Проверка введенных данных
-            if(Int32.TryParse(textBox1.Text, out int n))
+            if(Int32.TryParse(n.Text, out int N))
             {
-                int sum = Class1.Sum(n, textBox2);//Использование функции
-                textBox3.Text = sum.ToString();//Вывод ответа на форму
+                int sum = Class1.Sum(N, values);//Использование функции
+                rezult.Text = sum.ToString();//Вывод ответа на форму
             }
             else MessageBox.Show("Введите число", "Ошибка");
         }
